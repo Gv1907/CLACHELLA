@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#180613" />
+    <meta name="description" content="A CLACHELLA invitation for November 10, from 2 PM to 8 PM." />
+    <title>A CLACHELLA Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true">
+      <div class="stage-lights"></div>
+      <div class="stage-line"></div>
+    </div>
+    <div id="particle-layer" class="particle-layer" aria-hidden="true"></div>
+
+    <section class="gate" id="gate" aria-labelledby="gate-title">
+      <div class="gate-content">
+        <p class="eyebrow"><span></span> A little festival invitation <span></span></p>
+        <p class="gate-pretitle" id="gate-title">Something special is waiting...</p>
+        <h1 class="gate-logo">CLACHELLA</h1>
+        <p class="gate-caption">Music, lights &amp; a question for you</p>
+        <button class="play-button" id="play-button" type="button">
+          <span class="play-icon" aria-hidden="true">▶</span>
+          <span>Play &amp; reveal</span>
+        </button>
+        <p class="gate-hint">Tap to start the song and open your invitation</p>
+      </div>
+      <div class="gate-tower gate-tower-left" aria-hidden="true"></div>
+      <div class="gate-tower gate-tower-right" aria-hidden="true"></div>
+    </section>
+
+    <main class="page" id="invitation" hidden>
+      <article class="invite" id="invite-card">
+        <div class="invite-topline">
+          <span class="topline-dot" aria-hidden="true"></span>
+          <p>you are invited</p>
+          <span class="topline-dot" aria-hidden="true"></span>
+        </div>
+
+        <div class="headline">
+          <p class="eyebrow">Good music, good company, you &amp; me?</p>
+          <h2>Will you go to <span>CLACHELLA</span> with me?</h2>
+          <p class="intro">Hi!!!!! So uhm yea! Eto na yung gusto kong ibigay sa'yo—sorry if it took too long. I’d really like to get to know you more. I know this might seem sudden or a little weird, but I don’t want to rush you into anything. I just wanted to be honest about how I feel and ask if you’d like to spend the day with me at CLACHELLA. Whatever you decide, I’ll accept and respect it. Thank you, Ate!!!</p>
+        </div>
+
+        <div class="ticket" aria-label="CLACHELLA, November 10, from 2 PM to 8 PM">
+          <div class="ticket-main">
+            <p class="ticket-label">Save the date</p>
+            <p class="ticket-date">NOV <strong>10</strong></p>
+            <p class="ticket-time">2:00 PM <span>—</span> 8:00 PM</p>
+          </div>
+          <div class="ticket-stub" aria-hidden="true">
+            <span>GOOD VIBES</span>
+            <div class="barcode"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <span>ADMIT TWO</span>
+          </div>
+        </div>
+
+        <p class="little-note"><span aria-hidden="true">✷</span> Your company is the only thing missing <span aria-hidden="true">✷</span></p>
+
+        <div class="actions">
+          <button class="yes-button" id="yes-button" type="button">Yes!</button>
+          <button class="no-button" id="no-button" type="button">No</button>
+        </div>
+
+        <p class="response" id="response" aria-live="polite"></p>
+
+        <div class="music-player">
+          <p class="song-title">“Mahal Magmahal” — Esremborak</p>
+          <audio id="song-audio" preload="auto">
+            <source src="./Mahal%20Magmahal%20%28Live%20at%20The%20Cozy%20Cove%29%20-%20Esremborak.mp3" type="audio/mpeg" />
+            Your browser does not support audio playback.
+          </audio>
+          <p class="music-status" id="music-status" aria-live="polite"></p>
+          <label class="song-file-label" for="song-file" id="song-file-label" hidden>Choose the MP3 file to play</label>
+          <input id="song-file" class="song-file-input" type="file" accept=".mp3,audio/mpeg" hidden />
+        </div>
+      </article>
+    </main>
+
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
